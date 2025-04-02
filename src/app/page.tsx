@@ -13,9 +13,9 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-[#1E1E1E] via-[#252526] to-[#2D2D2D] text-white">
       {/* Top Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1E1E1E]/80 backdrop-blur-sm border-b border-[#3E3E3E]">
-        <div className="max-w-5xl mx-auto px-4 py-3">
+        <div className="max-w-5xl mx-auto px-4 py-2 md:py-3">
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex justify-end mb-2">
+          <div className="md:hidden flex justify-end">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-[#9CDCFE] hover:text-white transition-colors"
@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           
           {/* Navigation Links */}
-          <div className={`${mobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row items-start md:items-center md:justify-center gap-4 md:gap-6`}>
+          <div className={`${mobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row items-start md:items-center md:justify-center gap-4 md:gap-6 mt-2 md:mt-0`}>
             <a href="#skills" className="text-[#9CDCFE] hover:text-white transition-colors flex items-center gap-2 text-sm">
               <Cpu className="h-4 w-4" />
               Technical Skills
@@ -51,7 +51,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-[80vh] md:min-h-[90vh] flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden pt-16 md:pt-20">
+      <section className="min-h-[80vh] md:min-h-[90vh] flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden pt-24 md:pt-28">
         <ImageCarousel />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] -z-10" />
         <div className="max-w-5xl w-full mx-auto flex flex-col items-center gap-4 md:gap-8 relative z-10 mt-8 md:mt-8 px-6 md:px-8">
@@ -332,38 +332,41 @@ export default function Home() {
           <p className="text-base text-[#D4D4D4] mb-4">
             Currently based in New Delhi, India. Open to discussing new opportunities, collaborations, and contractual work.
           </p>
-          <div className="flex justify-center gap-4">
-            <a
-              href="https://linkedin.com/in/karanhudia"
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="https://www.linkedin.com/in/karanhudia/"
               target="_blank"
-              className="text-[#9CDCFE] hover:text-white flex items-center text-base"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[#1E1E1E] dark:text-white hover:text-[#1E1E1E]/80 dark:hover:text-white/80 transition-colors"
             >
-              <Linkedin className="mr-2 h-5 w-5" />
-              LinkedIn
-            </a>
-            <a
+              <Linkedin className="h-5 w-5" />
+              <span>LinkedIn</span>
+            </Link>
+            <Link
               href="https://github.com/karanhudia"
               target="_blank"
-              className="text-[#9CDCFE] hover:text-white flex items-center text-base"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[#1E1E1E] dark:text-white hover:text-[#1E1E1E]/80 dark:hover:text-white/80 transition-colors"
             >
-              <Github className="mr-2 h-5 w-5" />
-              GitHub
-            </a>
-            <a
+              <Github className="h-5 w-5" />
+              <span>GitHub</span>
+            </Link>
+            <Link
               href="https://leetcode.com/u/karanhudia/"
               target="_blank"
-              className="text-[#9CDCFE] hover:text-white flex items-center text-base"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[#1E1E1E] dark:text-white hover:text-[#1E1E1E]/80 dark:hover:text-white/80 transition-colors"
             >
-              <Code2 className="mr-2 h-5 w-5" />
-              LeetCode
-            </a>
-            <a
+              <Code2 className="h-5 w-5" />
+              <span>LeetCode</span>
+            </Link>
+            <Link
               href="mailto:karanhudia@gmail.com"
-              className="text-[#9CDCFE] hover:text-white flex items-center text-base"
+              className="flex items-center gap-2 text-[#1E1E1E] dark:text-white hover:text-[#1E1E1E]/80 dark:hover:text-white/80 transition-colors"
             >
-              <Mail className="mr-2 h-5 w-5" />
-              Email
-            </a>
+              <Mail className="h-5 w-5" />
+              <span>Email</span>
+            </Link>
           </div>
         </div>
       </section>

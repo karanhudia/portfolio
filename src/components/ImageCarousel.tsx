@@ -22,7 +22,7 @@ export default function ImageCarousel() {
   }, []);
 
   return (
-    <div className="absolute inset-x-8 inset-y-16 md:inset-y-20 z-0">
+    <div className="absolute inset-x-4 md:inset-x-8 inset-y-12 md:inset-y-16 z-0">
       <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#3E3E3E] shadow-2xl">
         {images.map((image, index) => (
           <div
